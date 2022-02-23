@@ -20,7 +20,23 @@ docker run -i -t -v $(pwd):/home/jovyan  -p 8888:8888 --rm --name jupyterlab con
 
 ---
 ### Running it on Google Colaboratory (Colab)
-Upload it to ```https://colab.research.google.com/``` and run all cells.  
+1. Upload it to ```https://colab.research.google.com/``` and run all cells.  
+
+---
+### Make it a Live app running on Heroku
+* I assume that you already have a Heroku account and Heroku Command Line (CLI) tool installed (check the [here](https://devcenter.heroku.com/articles/heroku-cli) if needed).
+1. Clone the repo than go inside its directory and run:
+```shell
+heroku create <your-app-name>
+heroku config:set -a <your-app-name> ALLOWED_HOSTS=<your-app-name>.herokuapp.com
+heroku config:set -a <your-app-name> SERVE_STATIC=True
+heroku config:set -a <your-app-name> NOTEBOOKS=*.ipynb
+git init
+heroku git:remote -a <your-app-name>
+git add .
+git commit -am "deploy my application"
+git push heroku master
+```
 
 ---
 ### Test it right now running on Heroku   
