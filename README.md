@@ -20,4 +20,8 @@ docker run -i -t -v $(pwd):/home/jovyan  -p 8888:8888 --rm --name jupyterlab con
 
 ---
 ### Running it on Google Colaboratory (Colab)
-Upload it to ```https://colab.research.google.com/``` and run all cells.
+Upload it to ```https://colab.research.google.com/``` and run all cells.  
+
+---
+### Test it right now running on Heroku   
+[TEST HERE](https://piratesbay-trending.herokuapp.com/app/1)
