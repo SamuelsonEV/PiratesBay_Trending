@@ -1,0 +1,6 @@
+mljar-mercury
+pandas
+folium
+lxml
+bs4
+IPython
